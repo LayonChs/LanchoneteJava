@@ -30,4 +30,14 @@ public class LanchoneteService {
         return jdbcTemplate.queryForList(query,"%"+nome+"%");
     }
 
+    public int atualizarPrato(PratoAtualizadoModel pratoAtualizado){
+        String query = "UPDATE pratos SET nome = ?, descricao = ?, preco = ?, disponivel = ? WHERE id = ?";
+        return jdbcTemplate.update(query,pratoAtualizado.getNome(),pratoAtualizado.getDescricao(),pratoAtualizado.getPreco(),pratoAtualizado.isDisponivel(), pratoAtualizado.getId());
+    }
+
+    public int excluirPrato(int id){
+        String query = "DELETE FROM pratos WHERE id = ?";
+        return jdbcTemplate.update(query, id);
+    }
+
 }
