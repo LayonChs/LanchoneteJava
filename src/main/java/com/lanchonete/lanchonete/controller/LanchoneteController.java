@@ -3,9 +3,6 @@ package com.lanchonete.lanchonete.controller;
 import com.lanchonete.lanchonete.model.PratoAtualizadoModel;
 import com.lanchonete.lanchonete.model.PratoModel;
 import com.lanchonete.lanchonete.service.*;
-
-import jakarta.websocket.server.PathParam;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
